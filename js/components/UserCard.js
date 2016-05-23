@@ -53,7 +53,7 @@ function UserCard() {
       <Image
         style={styles.avatar}
         source={{ uri: 'http://www.people.com.cn/mediafile/pic/20101103/9/1550245162796501193.jpg' }}
-        />
+      />
       <View style={styles.textWrapper}>
         <Text style={styles.name}>liwen zhang</Text>
         <Text style={styles.job}>Dev on sun</Text>
