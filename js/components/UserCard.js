@@ -1,25 +1,6 @@
-'use strict';
+import React from 'react'
+import {View, StyleSheet, Image, Text} from 'react-native'
 
-import React, {Component} from 'react';
-import {View, StyleSheet, Image, Text} from 'react-native';
-
-export default class UserCard extends Component {
-  render() {
-    return (
-      <View style={[styles.card, styles.shadow]}>
-        <Image
-          style={styles.avatar}
-          source={{uri: 'http://www.people.com.cn/mediafile/pic/20101103/9/1550245162796501193.jpg'}}
-          />
-        <View style={styles.textWrapper}>
-          <Text style={styles.name}>liwen zhang</Text>
-          <Text style={styles.job}>Dev on sun</Text>
-          <Text style={styles.email}>lwzhang@thoughtworks.com</Text>
-        </View>
-      </View>
-    )
-  }
-}
 
 const styles = StyleSheet.create({
   name: {
@@ -64,7 +45,22 @@ const styles = StyleSheet.create({
     },
     shadowRadius: 2
   }
-});
+})
 
+function UserCard() {
+  return (
+    <View style={[styles.card, styles.shadow]}>
+      <Image
+        style={styles.avatar}
+        source={{ uri: 'http://www.people.com.cn/mediafile/pic/20101103/9/1550245162796501193.jpg' }}
+        />
+      <View style={styles.textWrapper}>
+        <Text style={styles.name}>liwen zhang</Text>
+        <Text style={styles.job}>Dev on sun</Text>
+        <Text style={styles.email}>lwzhang@thoughtworks.com</Text>
+      </View>
+    </View>
+  )
+}
 
-
+export default UserCard

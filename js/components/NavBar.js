@@ -1,18 +1,11 @@
-'use strict';
-import React, {Component} from 'react';
+import React from 'react'
 import {
   StyleSheet,
   Text,
-  View,
-} from 'react-native';
+  View
+} from 'react-native'
 
-export default function NavBar() {
-  return (
-    <View style={[styles.navBar, styles.shadow]}>
-      <Text style={styles.navBarTitle}>ThoughtWorkers</Text>
-    </View>
-  )
-}
+
 const styles = StyleSheet.create({
   navBar: {
     backgroundColor: '#F50057',
@@ -35,4 +28,14 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold'
   }
-});
+})
+
+function NavBar() {
+  return (
+    <View style={[styles.navBar, styles.shadow]}>
+      <Text style={styles.navBarTitle}>ThoughtWorkers</Text>
+    </View>
+  )
+}
+
+export default NavBar
