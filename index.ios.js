@@ -10,4 +10,4 @@ import {
 } from 'react-native';
 import App from './js/App';
 
-AppRegistry.registerComponent('renat', () => App);
+AppRegistry.registerComponent('Facehub', () => App);

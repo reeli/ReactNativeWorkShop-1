@@ -11,7 +11,7 @@ import {
   View
 } from 'react-native';
 
-class renat extends Component {
+class facehub extends Component {
   render() {
     return (
       <View style={styles.container}>
@@ -48,4 +48,4 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('renat', () => renat);
+AppRegistry.registerComponent('facehub', () => facehub);

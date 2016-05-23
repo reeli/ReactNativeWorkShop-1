@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "renat.app"
-               BlueprintName = "renat"
-               ReferencedContainer = "container:renat.xcodeproj">
+               BuildableName = "facehub.app"
+               BlueprintName = "facehub"
+               ReferencedContainer = "container:facehub.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "renatTests.xctest"
-               BlueprintName = "renatTests"
-               ReferencedContainer = "container:renat.xcodeproj">
+               BuildableName = "facehubTests.xctest"
+               BlueprintName = "facehubTests"
+               ReferencedContainer = "container:facehub.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "renatTests.xctest"
-               BlueprintName = "renatTests"
-               ReferencedContainer = "container:renat.xcodeproj">
+               BuildableName = "facehubTests.xctest"
+               BlueprintName = "facehubTests"
+               ReferencedContainer = "container:facehub.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "renat.app"
-            BlueprintName = "renat"
-            ReferencedContainer = "container:renat.xcodeproj">
+            BuildableName = "facehub.app"
+            BlueprintName = "facehub"
+            ReferencedContainer = "container:facehub.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "renat.app"
-            BlueprintName = "renat"
-            ReferencedContainer = "container:renat.xcodeproj">
+            BuildableName = "facehub.app"
+            BlueprintName = "facehub"
+            ReferencedContainer = "container:facehub.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -96,9 +96,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "renat.app"
-            BlueprintName = "renat"
-            ReferencedContainer = "container:renat.xcodeproj">
+            BuildableName = "facehub.app"
+            BlueprintName = "facehub"
+            ReferencedContainer = "container:facehub.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
