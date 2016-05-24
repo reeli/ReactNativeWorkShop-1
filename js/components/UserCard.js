@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {View, StyleSheet, Image, Text} from 'react-native'
 
 
@@ -47,20 +47,21 @@ const styles = StyleSheet.create({
   }
 })
 
-function UserCard() {
-  return (
-    <View style={[styles.card, styles.shadow]}>
-      <Image
-        style={styles.avatar}
-        source={{ uri: 'http://www.people.com.cn/mediafile/pic/20101103/9/1550245162796501193.jpg' }}
-      />
-      <View style={styles.textWrapper}>
-        <Text style={styles.name}>liwen zhang</Text>
-        <Text style={styles.job}>Dev on sun</Text>
-        <Text style={styles.email}>lwzhang@thoughtworks.com</Text>
+export default class UserCard extends Component {
+  render() {
+    return (
+      <View style={[styles.card, styles.shadow]}>
+        <Image
+          style={styles.avatar}
+          source={{uri: this.props.avatar }}
+          />
+        <View style={styles.textWrapper}>
+          <Text style={styles.name}>{this.props.user.name}</Text>
+          <Text style={styles.job}>{this.props.user.title} on {this.props.user.project}</Text>
+          <Text style={styles.email}>{this.props.user.email}</Text>
+        </View>
       </View>
-    </View>
-  )
+    )
+  }
 }
 
-export default UserCard
