@@ -11,7 +11,6 @@ import {View, StatusBar, StyleSheet, ListView} from 'react-native';
 import NavBar from './components/NavBar';
 import UserCard from './components/UserCard';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux'
 import { fetchUserListAction } from './actions/userListAction'
 
 class App extends Component {
@@ -28,16 +27,15 @@ class App extends Component {
   }
 
   render() {
-    const { userlist, dispatch } = this.props
-
+    const { userlist } = this.props
     const ds = this.dataSource.cloneWithRows(userlist);
-    console.log(userlist);
+
     return (
       <View style={styles.container}>
         <NavBar />
         <ListView
           dataSource={ds}
-          renderRow={(user) => <UserCard user= {user}/>}/>
+          renderRow={(user) => <UserCard user={user}/>} enableEmptySections={true}/>
       </View>
     )
   }
@@ -50,7 +48,6 @@ const styles = StyleSheet.create({
   }
 });
 
-
 // Note: use https://github.com/faassen/reselect for better performance.
 function select(state) {
   return {
@@ -60,7 +57,7 @@ function select(state) {
 
 function mapDispatchToProps(dispatch) {
   return {
-    fetchAction: bindActionCreators(fetchUserListAction, dispatch)
+    fetchAction: () => dispatch(fetchUserListAction())
   }
 }
 
