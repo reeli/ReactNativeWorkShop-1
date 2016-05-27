@@ -1,6 +1,5 @@
-import React from 'react'
+import React, { Component } from 'react'
 import {View, StyleSheet, Image, Text} from 'react-native'
-
 
 const styles = StyleSheet.create({
   name: {
@@ -44,23 +43,44 @@ const styles = StyleSheet.create({
       height: 2
     },
     shadowRadius: 2
+  },
+  nameAndOffice: {
+    flexDirection: 'row',
+    alignItems: 'center'
+  },
+  office: {
+    color: 'white',
+    margin: 5
+  },
+  officeWrapper: {
+    backgroundColor: '#F50057',
+    marginLeft: 20,
+    alignItems: 'center',
+    borderRadius: 10,
+    width: 60
   }
 })
 
-function UserCard() {
-  return (
-    <View style={[styles.card, styles.shadow]}>
-      <Image
-        style={styles.avatar}
-        source={{ uri: 'http://www.people.com.cn/mediafile/pic/20101103/9/1550245162796501193.jpg' }}
-      />
-      <View style={styles.textWrapper}>
-        <Text style={styles.name}>liwen zhang</Text>
-        <Text style={styles.job}>Dev on sun</Text>
-        <Text style={styles.email}>lwzhang@thoughtworks.com</Text>
+export default class UserCard extends Component {
+  render() {
+    return (
+        <View style={[styles.card, styles.shadow]}>
+        <Image
+          style={styles.avatar}
+          source={{uri: this.props.user.avatar}}
+          />
+        <View style={styles.textWrapper}>
+          <View style={styles.nameAndOffice}>
+            <Text style={styles.name}>{this.props.user.name}</Text>
+            <View style={styles.officeWrapper}>
+              <Text style={styles.office}>{this.props.user.office}</Text>
+            </View>
+          </View>
+          <Text style={styles.job}>{this.props.user.title} on {this.props.user.project}</Text>
+          <Text style={styles.email}>{this.props.user.email}</Text>
+        </View>
       </View>
-    </View>
-  )
+    )
+  }
 }
 
-export default UserCard
