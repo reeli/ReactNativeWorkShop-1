@@ -1,11 +1,6 @@
 import { createStore, compose, applyMiddleware } from 'redux'
+import thunk from 'redux-thunk'
+
 import fetchUserlist from '../reducers/userReducer'
 
-const promiseMiddleware = () => (next) => (action) => {
-  if (typeof action.then === 'function') {
-    return Promise.resolve(action).then(next)
-  }
-  return next(action)
-}
-
-export default createStore(fetchUserlist, compose(applyMiddleware(promiseMiddleware)))
+export default createStore(fetchUserlist, compose(applyMiddleware(thunk)))
