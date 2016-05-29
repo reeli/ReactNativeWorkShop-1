@@ -33,8 +33,9 @@ class App extends Component {
   }
 
   render() {
-    const { userlist, filterAction } = this.props
-    const ds = this.dataSource.cloneWithRows(userlist)
+    const { userlist, filter, filterAction } = this.props
+    const filteredList = filter === '' ? userlist : userlist.filter(item => item.office === filter)
+    const ds = this.dataSource.cloneWithRows(filteredList)
 
     return (
       <View style={styles.container}>
@@ -51,7 +52,8 @@ class App extends Component {
 
 function select(state) {
   return {
-    userlist: state.userList
+    userlist: state.userList,
+    filter: state.filter
   }
 }
 
