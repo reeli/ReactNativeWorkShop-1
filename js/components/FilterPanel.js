@@ -1,5 +1,5 @@
 import React from 'react'
-import { TextInput, AlertIOS } from 'react-native'
+import { TextInput } from 'react-native'
 
 const styles = {
   filter: {
@@ -21,7 +21,7 @@ class FilterPanel extends React.Component {
       <TextInput
         style={styles.filter}
         onChangeText={(text) => this.setState({ filter: text })}
-        onEndEditing={(event) => AlertIOS.alert(event.nativeEvent.text)}
+        onEndEditing={(event) => this.props.action(event.nativeEvent.text)}
       />
     )
   }

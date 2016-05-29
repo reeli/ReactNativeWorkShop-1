@@ -1,6 +1,6 @@
 import { createStore, compose, applyMiddleware } from 'redux'
 import thunk from 'redux-thunk'
 
-import fetchUserlist from '../reducers/userReducer'
+import reducers from '../reducers'
 
-export default createStore(fetchUserlist, compose(applyMiddleware(thunk)))
+export default createStore(reducers, compose(applyMiddleware(thunk)))

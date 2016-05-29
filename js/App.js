@@ -5,11 +5,14 @@
  */
 import React, { Component } from 'react'
 import { View, StatusBar, StyleSheet, ListView } from 'react-native'
+import { connect } from 'react-redux'
+
 import NavBar from './components/NavBar'
 import UserCard from './components/UserCard'
 import FilterPanel from './components/FilterPanel'
-import { connect } from 'react-redux'
+
 import { fetchUserListAction } from './actions/userListAction'
+import { userFilterAction } from './actions/userFilterAction'
 
 const styles = StyleSheet.create({
   container: {
@@ -30,13 +33,13 @@ class App extends Component {
   }
 
   render() {
-    const { userlist } = this.props
+    const { userlist, filterAction } = this.props
     const ds = this.dataSource.cloneWithRows(userlist)
 
     return (
       <View style={styles.container}>
         <NavBar />
-        <FilterPanel />
+        <FilterPanel action={filterAction} />
         <ListView
           dataSource={ds}
           renderRow={(user) => <UserCard user={user} />} enableEmptySections
@@ -48,13 +51,14 @@ class App extends Component {
 
 function select(state) {
   return {
-    userlist: state
+    userlist: state.userList
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
-    fetchAction: () => dispatch(fetchUserListAction())
+    fetchAction: () => dispatch(fetchUserListAction()),
+    filterAction: (filter) => dispatch(userFilterAction(filter))
   }
 }
 
