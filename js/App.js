@@ -7,6 +7,7 @@ import React, { Component } from 'react'
 import { View, StatusBar, StyleSheet, ListView } from 'react-native'
 import NavBar from './components/NavBar'
 import UserCard from './components/UserCard'
+import FilterPanel from './components/FilterPanel'
 import { connect } from 'react-redux'
 import { fetchUserListAction } from './actions/userListAction'
 
@@ -35,6 +36,7 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <NavBar />
+        <FilterPanel />
         <ListView
           dataSource={ds}
           renderRow={(user) => <UserCard user={user} />} enableEmptySections
