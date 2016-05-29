@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import {View, StyleSheet, Image, Text} from 'react-native'
+import { View, StyleSheet, Image, Text } from 'react-native'
 
 const styles = StyleSheet.create({
   name: {
@@ -64,11 +64,11 @@ const styles = StyleSheet.create({
 export default class UserCard extends Component {
   render() {
     return (
-        <View style={[styles.card, styles.shadow]}>
+      <View style={[styles.card, styles.shadow]}>
         <Image
           style={styles.avatar}
-          source={{uri: this.props.user.avatar}}
-          />
+          source={{ uri: this.props.user.avatar }}
+        />
         <View style={styles.textWrapper}>
           <View style={styles.nameAndOffice}>
             <Text style={styles.name}>{this.props.user.name}</Text>

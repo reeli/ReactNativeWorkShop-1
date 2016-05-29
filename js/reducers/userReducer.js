@@ -1,5 +1,5 @@
 
-import { fetchUserListAction, FetchUser } from "../actions/userListAction"
+import { FetchUser } from '../actions/userListAction'
 
 export default function fetchUserlist(state = [], action) {
   switch (action.type) {
@@ -9,4 +9,3 @@ export default function fetchUserlist(state = [], action) {
       return state
   }
 }
-
